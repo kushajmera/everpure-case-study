@@ -1,0 +1,10 @@
+# Phase 3 manifest hashes cover the generated CRLF bytes in this baseline.
+# Preserve those bytes in Git; regeneration with different newlines requires a refreshed manifest.
+outputs/phase3/*.csv -text
+outputs/phase3/*.json -text
+notebooks/03_monte_carlo_npv.ipynb -text
+
+# Preserve Phase 4 generated artifact bytes across Git's CRLF conversion.
+outputs/phase4/*.csv -text
+outputs/phase4/*.json -text
+notebooks/04_gtm_routing.ipynb -text

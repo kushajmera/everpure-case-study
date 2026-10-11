@@ -1,0 +1,90 @@
+{
+  "activation_cost_timing": "Once at exact continuous first-event time T when T <= 12",
+  "commercial_discount_tiers": {
+    "high_30pct": 0.3,
+    "low_5pct": 0.05,
+    "medium_15pct": 0.15
+  },
+  "continuous_month_definition": "One abstract continuous model month; no exact calendar-day mapping",
+  "currency": "USD",
+  "financial_horizon_months": 12,
+  "forecast_horizon_months": 12,
+  "local_account_input": {
+    "classification": "CONFIDENTIAL_LOCAL_ONLY",
+    "expected_rows": 10296,
+    "grain": [
+      "account_id",
+      "reactivation_scenario",
+      "commercial_discount_tier"
+    ],
+    "null_policy": "No null keys or economic values; source missingness represented by explicit flags",
+    "path": "outputs/phase3/local_only/account_economic_signals.csv",
+    "schema": {
+      "account_hazard_per_month": "float >=0",
+      "account_id": "string",
+      "activation_discount_factor_integral": "float [0,1]",
+      "allocated_outreach_cost": "float >=0",
+      "analysis_as_of_date": "YYYY-MM-DD",
+      "commercial_discount_rate": "float [0,1]",
+      "commercial_discount_tier": "enum",
+      "expected_account_npv": "finite float",
+      "expected_billed_account_probability": "float [0,1]",
+      "expected_pv_activation_cost": "float >=0",
+      "expected_pv_contribution": "float >=0",
+      "expected_pv_gross_contribution": "float >=0",
+      "expected_pv_gross_revenue": "float >=0",
+      "expected_reactivation_probability": "float [0,1]",
+      "financial_assumption_fingerprint_sha256": "SHA-256",
+      "financial_assumption_version": "string",
+      "financial_provenance": "string",
+      "fiscal_eligibility_confirmed": "bool false",
+      "has_manual_review_exceptions": "bool",
+      "health_unknown": "bool",
+      "paid_month_pv_factor": "float >=0",
+      "partner_unknown": "bool",
+      "phase2_probability_provenance": "string",
+      "reactivation_scenario": "enum",
+      "root_account_id": "string",
+      "root_group_identifier": "string",
+      "scenario_cohort_status": "string",
+      "ticket_sentinel": "bool",
+      "tickets_missing": "bool"
+    },
+    "sha256": "9875115104b405b99e0e95c803f5782525a0ffd613f3528948c416463ee94b1b",
+    "unique_accounts": 1144
+  },
+  "outreach_cost_timing": "Every targeted account at month zero regardless of event",
+  "permitted_aggregate_outputs": [
+    "financial_scenario_matrix.csv",
+    "monte_carlo_npv_summary.csv",
+    "financial_sensitivity.csv",
+    "discount_break_even.csv"
+  ],
+  "phase2_assumption_fingerprint_sha256": "6195ba2e90c95976ed91b7bdd42509341fd22e71e6b2bb5aed2e5d2a6d346ee7",
+  "phase3_financial_assumption_fingerprint_sha256": "b953c02d3fdcfacc62d9e6755889040e9f8bd12db7c830a88c79f5c991267e70",
+  "phase4_requirement": "Define review and blocked states for unresolved eligibility, ownership, health and quality before routing",
+  "primary_cohort": "reported_2y_scenario_cohort (provisional; fiscal eligibility unconfirmed)",
+  "prohibited_interpretations": [
+    "confirmed fiscal-year eligibility",
+    "contact authorization from missing ownership",
+    "verified healthy status from unknown health",
+    "validated customer propensity",
+    "verified profitability",
+    "historical spend as ARR",
+    "synthetic Cox as customer evidence",
+    "causally incremental campaign uplift",
+    "positive NPV is not contact authorization"
+  ],
+  "provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+  "reconciliation": "Scale-aware absolute-plus-relative tolerance capped at $0.001 per scenario cell; sum local expected components and account NPV to analytic portfolio values",
+  "reporting_label": "ILLUSTRATIVE_NET_PROGRAM_NPV_NOT_CAUSALLY_ATTRIBUTED",
+  "revenue_recognition_rule": "Full service month m only when first event T <= m-1; no proration",
+  "scenarios": [
+    "conservative",
+    "base",
+    "optimistic"
+  ],
+  "source_sha256": "6863ea0014f050355bf9e0c5166e2284edfe8521ea3d87a2a2fa168177a229bc",
+  "valuation_origin": "2026-10-09",
+  "version": "phase3-to-phase4-v1"
+}

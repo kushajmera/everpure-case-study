@@ -1,0 +1,28 @@
+{
+  "authorized_contact_actions": 0,
+  "channels": {
+    "DIGITAL_NURTURE_CANDIDATE": 205,
+    "DIRECT_ENTERPRISE_CANDIDATE": 66,
+    "HOLD_REVIEW": 626,
+    "PARTNER_LED_CANDIDATE": 247
+  },
+  "eligibility_conflicts": 562,
+  "eligibility_unknown": 294,
+  "financial_label": "ILLUSTRATIVE_NET_PROGRAM_NPV_NOT_CAUSALLY_ATTRIBUTED",
+  "financial_provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+  "full_source_known_ownership_conflict_roots": 235,
+  "illustrative_reference_portfolio_npv_usd": 201501.65868186974,
+  "modeled_accounts": 1144,
+  "modeled_known_ownership_conflict_roots": 145,
+  "modeled_roots": 295,
+  "phase2_assumption_fingerprint_sha256": "6195ba2e90c95976ed91b7bdd42509341fd22e71e6b2bb5aed2e5d2a6d346ee7",
+  "phase3_financial_assumption_fingerprint_sha256": "b953c02d3fdcfacc62d9e6755889040e9f8bd12db7c830a88c79f5c991267e70",
+  "policy_fingerprint_sha256": "1998cc4a68c88160f01d89ca0abfe7c2ae955d912181b872556c149e5201af3c",
+  "reference_discount_tier": "medium_15pct",
+  "reference_scenario": "base",
+  "root_coordination_required_accounts": 1131,
+  "root_coordination_required_roots": 282,
+  "source_accounts": 2000,
+  "source_sha256": "6863ea0014f050355bf9e0c5166e2284edfe8521ea3d87a2a2fa168177a229bc",
+  "version": "phase4-metrics-v1"
+}

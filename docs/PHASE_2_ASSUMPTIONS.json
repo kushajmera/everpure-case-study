@@ -1,0 +1,22 @@
+{
+  "version": "phase2-assumptions-v1",
+  "provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+  "analysis_as_of_date": "2026-10-09",
+  "time_unit": "continuous_month",
+  "cohort_policy": "reported_2y_scenario_cohort",
+  "horizons_months": [3, 6, 12],
+  "monthly_baseline_hazards": {
+    "conservative": 0.006,
+    "base": 0.012,
+    "optimistic": 0.020
+  },
+  "assumed_log_hazard_effects": {
+    "health_red": -0.35,
+    "health_yellow": -0.15,
+    "partner_managed_yes": 0.15,
+    "log1p_valid_tickets": -0.08,
+    "is_child": -0.10
+  },
+  "missing_feature_contribution": "reference-level assumed contribution with explicit missingness flags",
+  "rationale": "Illustrative monthly hazards and modest directional effects chosen for transparent sensitivity analysis; no Everpure event histories or external conversion benchmarks were used."
+}

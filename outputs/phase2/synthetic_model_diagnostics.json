@@ -1,0 +1,21 @@
+{
+  "baseline_survival_at_last_event": 0.17979382368764188,
+  "baseline_survival_monotone": true,
+  "baseline_survival_reference_profile": "lifelines mean covariate profile",
+  "concordance_in_sample": 0.6238576893605554,
+  "concordance_independent_synthetic_holdout": 0.5953205167830871,
+  "converged": true,
+  "convergence_warnings": [],
+  "fit_status": "converged",
+  "n_events": 1074,
+  "n_right_censored": 526,
+  "numerical_warnings": [],
+  "ph_rejections_at_0_05": [],
+  "ph_schoenfeld_rank_p_values": {
+    "engagement_proxy": 0.2523688837220447,
+    "health_proxy": 0.28328716869220194,
+    "partner_proxy": 0.939195015702955
+  },
+  "provenance": "SYNTHETIC_METHODOLOGY",
+  "warnings": []
+}

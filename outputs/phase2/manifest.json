@@ -1,0 +1,98 @@
+{
+  "analysis_as_of_date": "2026-10-09",
+  "assumption_register": "docs/PHASE_2_ASSUMPTIONS.json",
+  "assumption_version": "phase2-assumptions-v1",
+  "files": [
+    {
+      "name": "assumptions.json",
+      "provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+      "sha256": "55558aedadf4554b89a5eb54d6e06a4a406f70cba9bccccafd5faa644242d486"
+    },
+    {
+      "name": "cohort_reconciliation.csv",
+      "provenance": "DERIVED_SOURCE",
+      "sha256": "b6b6fe18f76161fdd4cec262958464d8fa1f8212680230e70a917e1fc41ae9c8"
+    },
+    {
+      "name": "feature_dictionary.csv",
+      "provenance": [
+        "DERIVED_SOURCE",
+        "ASSUMPTION_BASED_NOT_CALIBRATED"
+      ],
+      "sha256": "57c068996d66f2e801698f3b72142454ff9380e0d1a3eb71f069659f29b36e75"
+    },
+    {
+      "name": "metrics.json",
+      "provenance": [
+        "OBSERVED_SOURCE",
+        "DERIVED_SOURCE",
+        "SYNTHETIC_METHODOLOGY",
+        "ASSUMPTION_BASED_NOT_CALIBRATED"
+      ],
+      "sha256": "2c5a367716a1ac08a01291a8fcc46bf1e08f24d5bcd5773851a03c2c5a938cbf"
+    },
+    {
+      "name": "phase3_input_contract.json",
+      "provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+      "sha256": "65ae468e1d0262ab5136b4202cafc767dae3d6110c2f1a6561001df102d8889d"
+    },
+    {
+      "name": "reactivation_scenario_probabilities.csv",
+      "provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+      "sha256": "6322a0adc58dbaa999e5523f3a17db5faaa61ca3f8a359011a6322e0466800c8"
+    },
+    {
+      "name": "reactivation_scenario_summary.csv",
+      "provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+      "sha256": "c697718ceb024e6bf132a8581f2ca60552e1d794d776eb9b5c066818fa76fb7c"
+    },
+    {
+      "name": "scenario_sensitivity.csv",
+      "provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+      "sha256": "f64a84a56c262e63797e32e6f2855910fff35b62a07bd6321a010e4d41cfbd9c"
+    },
+    {
+      "name": "synthetic_baseline_survival.csv",
+      "provenance": "SYNTHETIC_METHODOLOGY",
+      "sha256": "248145b68dc18dad19376c8db4738450a120a73a4af6d6d91669e4550f69b1c1"
+    },
+    {
+      "name": "synthetic_cox_coefficients.csv",
+      "provenance": "SYNTHETIC_METHODOLOGY",
+      "sha256": "c0af0a1a074df93d9e3ceb351c79d521da21298e2cc6289c59f9717be796219b"
+    },
+    {
+      "name": "synthetic_generation_manifest.json",
+      "provenance": "SYNTHETIC_METHODOLOGY",
+      "sha256": "23dd8372b99c8319c0c7a40e8e39f52dfe0694282bf6eeb8a5a8c716e59c1b5f"
+    },
+    {
+      "name": "synthetic_kaplan_meier.csv",
+      "provenance": "SYNTHETIC_METHODOLOGY",
+      "sha256": "83f2aed34879eb6389b9068e5ff63941b1930cee196717e2815586b52aea496f"
+    },
+    {
+      "name": "synthetic_model_diagnostics.json",
+      "provenance": "SYNTHETIC_METHODOLOGY",
+      "sha256": "450b67cc76d532f256bc64fc6a8004cf6a583c5a0a1b955ed79f6f78befb4b32"
+    },
+    {
+      "name": "synthetic_survival_cohort.csv",
+      "provenance": "SYNTHETIC_METHODOLOGY",
+      "sha256": "89c3f2beb7783e7fbb60196e396bcd0ae8aa94ef2a74aebb753ca43c939d962d"
+    },
+    {
+      "name": "synthetic_survival_predictions.csv",
+      "provenance": "SYNTHETIC_METHODOLOGY",
+      "sha256": "3268cf97aa79a10fdcedb325d3bb31c99a50735cffcf0da0ea772bb0d0bcad5b"
+    }
+  ],
+  "lifelines_version": "0.30.3",
+  "numpy_version": "2.2.6",
+  "pandas_version": "2.2.3",
+  "python_version": "3.12.10",
+  "source_provenance": "OBSERVED_SOURCE",
+  "source_sha256": "6863ea0014f050355bf9e0c5166e2284edfe8521ea3d87a2a2fa168177a229bc",
+  "time_unit": "continuous_month",
+  "version": "phase2-artifact-manifest-v1"
+}

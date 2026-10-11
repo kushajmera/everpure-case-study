@@ -1,0 +1,224 @@
+{
+  "aggregate_schemas": {
+    "cohort_reconciliation_summary.csv": {
+      "columns": [
+        "scenario_cohort_status",
+        "account_count",
+        "population_denominator_accounts",
+        "percent_of_population",
+        "reference_scenario",
+        "reference_discount_tier",
+        "policy_version",
+        "provenance",
+        "limitation"
+      ],
+      "record_grain": [
+        "scenario_cohort_status"
+      ]
+    },
+    "commercial_priority_summary.csv": {
+      "columns": [
+        "commercial_priority_tier",
+        "account_count",
+        "population_denominator_accounts",
+        "percent_of_population",
+        "reference_scenario",
+        "reference_discount_tier",
+        "policy_version",
+        "provenance",
+        "limitation"
+      ],
+      "record_grain": [
+        "commercial_priority_tier"
+      ]
+    },
+    "data_readiness_summary.csv": {
+      "columns": [
+        "measure",
+        "account_count",
+        "population_denominator_accounts",
+        "policy_version",
+        "reference_scenario",
+        "reference_discount_tier",
+        "limitation"
+      ],
+      "record_grain": [
+        "measure"
+      ]
+    },
+    "priority_evidence_summary.csv": {
+      "columns": [
+        "commercial_priority_tier",
+        "evidence_quality_status",
+        "account_count",
+        "population_denominator_accounts",
+        "policy_version",
+        "reference_scenario",
+        "reference_discount_tier",
+        "limitation"
+      ],
+      "record_grain": [
+        "commercial_priority_tier",
+        "evidence_quality_status"
+      ]
+    },
+    "root_coordination_summary.csv": {
+      "columns": [
+        "measure",
+        "root_count",
+        "population_denominator_roots",
+        "policy_version",
+        "reference_scenario",
+        "reference_discount_tier",
+        "limitation"
+      ],
+      "record_grain": [
+        "measure"
+      ]
+    },
+    "routing_channel_summary.csv": {
+      "columns": [
+        "planning_disposition",
+        "account_count",
+        "population_denominator_accounts",
+        "percent_of_population",
+        "reference_scenario",
+        "reference_discount_tier",
+        "policy_version",
+        "provenance",
+        "limitation"
+      ],
+      "record_grain": [
+        "planning_disposition"
+      ]
+    },
+    "routing_rule_counts.csv": {
+      "columns": [
+        "primary_rule_id",
+        "account_count",
+        "population_denominator_accounts",
+        "percent_of_population",
+        "reference_scenario",
+        "reference_discount_tier",
+        "policy_version",
+        "provenance",
+        "limitation"
+      ],
+      "record_grain": [
+        "primary_rule_id"
+      ]
+    },
+    "scenario_priority_sensitivity.csv": {
+      "columns": [
+        "reactivation_scenario",
+        "commercial_discount_tier",
+        "modeled_account_count",
+        "illustrative_sum_account_npv_usd",
+        "high_priority_count",
+        "low_priority_count",
+        "medium_priority_count",
+        "policy_version",
+        "financial_label",
+        "limitation"
+      ],
+      "record_grain": [
+        "reactivation_scenario",
+        "commercial_discount_tier"
+      ]
+    },
+    "service_barrier_summary.csv": {
+      "columns": [
+        "service_barrier_status",
+        "account_count",
+        "population_denominator_accounts",
+        "percent_of_population",
+        "reference_scenario",
+        "reference_discount_tier",
+        "policy_version",
+        "provenance",
+        "limitation"
+      ],
+      "record_grain": [
+        "service_barrier_status"
+      ]
+    }
+  },
+  "classification": "AGGREGATE_ONLY",
+  "cohort_denominators": {
+    "modeled_accounts": 1144,
+    "modeled_roots": 295,
+    "source_accounts": 2000
+  },
+  "currency": "USD",
+  "executive_disclosures": {
+    "alternative_compounded_stress": "Separate alternative compounded stress: base hazard multiplier 0.5, $750 monthly gross revenue, 60 percent margin, $150 outreach, $200 activation, 12 percent annual financial discount, at most 3 paid months, 15 percent commercial discount; analytical expected NPV -$124,704.050145.",
+    "assumed_probabilities": "Reactivation probabilities are assumption-based and not calibrated to observed customer outcomes.",
+    "committed_adverse_stress": "Committed Phase 3 combined adverse stress: base hazard multiplier 1.0, $750 monthly gross revenue, 45 percent margin, $150 outreach, $300 activation, 24 percent annual financial discount, at most 3 paid months, 15 percent commercial discount; analytical expected NPV -$124,647.432973.",
+    "discount_mechanics": "Lower discounts are mechanically favored when conversion assumptions do not change; fixed delivery costs may change that comparison.",
+    "fiscal_eligibility": "Source-reported two-year inactivity is provisional; fiscal eligibility is unconfirmed.",
+    "historical_spend": "Historical recorded spend is not ARR or verified recoverable revenue.",
+    "hypothetical_offers": "The 5, 15, and 30 percent commercial discounts are hypothetical interventions without estimated response elasticity.",
+    "illustrative_npv": "NPV is illustrative net program value, not verified customer profitability.",
+    "missing_feature_bias": "Unknown health and sentinel tickets can bias assumed financial rankings.",
+    "no_causal_uplift": "Incremental campaign uplift is not causally identified without an untreated counterfactual.",
+    "no_contact_authorization": "No customer-contact action was authorized or executed; every recommendation is planning only.",
+    "revenue_decay": "Historical account revenue decay is unobserved.",
+    "root_dependence": "Within-root reactivation outcomes are modeled as conditionally independent.",
+    "root_financial_overlap": "Parent-child billable independence and consolidated root revenue are unverified.",
+    "scenario_priority_sensitivity": "Priority counts under alternative financial scenarios use the fixed base/15% dollar cutoffs. They measure movement across absolute financial thresholds, not changes in relative account rank.",
+    "source_discounts": "Recorded source discounts differ from the hypothetical commercial offers.",
+    "ticket_velocity": "Open tickets are a snapshot backlog proxy; ticket velocity is unobserved."
+  },
+  "financial_horizon_months": 12,
+  "financial_label": "ILLUSTRATIVE_NET_PROGRAM_NPV_NOT_CAUSALLY_ATTRIBUTED",
+  "financial_provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+  "metrics_schema": {
+    "keys": [
+      "authorized_contact_actions",
+      "channels",
+      "eligibility_conflicts",
+      "eligibility_unknown",
+      "financial_label",
+      "financial_provenance",
+      "full_source_known_ownership_conflict_roots",
+      "illustrative_reference_portfolio_npv_usd",
+      "modeled_accounts",
+      "modeled_known_ownership_conflict_roots",
+      "modeled_roots",
+      "phase2_assumption_fingerprint_sha256",
+      "phase3_financial_assumption_fingerprint_sha256",
+      "policy_fingerprint_sha256",
+      "reference_discount_tier",
+      "reference_scenario",
+      "root_coordination_required_accounts",
+      "root_coordination_required_roots",
+      "source_accounts",
+      "source_sha256",
+      "version"
+    ]
+  },
+  "permitted_aggregate_files": {
+    "cohort_reconciliation_summary.csv": "ebc44be473793eceb35d80847fe02fdf954d34f5af389971ff087b87dd134c9d",
+    "commercial_priority_summary.csv": "bf9c66e5a75c53c75bdfe5a560fe506e421111255033c40762a072e635013f0e",
+    "data_readiness_summary.csv": "2733411ac941d7cc228e58783fc68b2b1c08c08c8142b17d8155147dab084b45",
+    "metrics.json": "39f6cb3c1d34fc3296f84cc2261d3358cab99d93affbceec338d2aad9e8a7151",
+    "priority_evidence_summary.csv": "816a0a12c840d714bd35be186494edf4d20ecf9b1254725afdd07e8aa62fa13f",
+    "root_coordination_summary.csv": "5479ffa59e1760cd26c6972e4a74a5b02ca5aaa43a8508cb6c94106d64fe3f97",
+    "routing_channel_summary.csv": "057c3b7310d02196b155e4116c53ff8522219f62d3a80a0b7c70a6e2518bc0be",
+    "routing_rule_counts.csv": "bee0056c5abd94493ca42d9846fa0b5b3d3e30a83c30bd90d3e2adfcdfe033f9",
+    "scenario_priority_sensitivity.csv": "7e23b399407bd055d6ff1abd001d67cb0d803b623f28f3c138950bf19ba50929",
+    "service_barrier_summary.csv": "9957dce87eb8849b31188d0bd07771b7b04f779cd497382d781f036532a9d21b"
+  },
+  "phase2_assumption_fingerprint_sha256": "6195ba2e90c95976ed91b7bdd42509341fd22e71e6b2bb5aed2e5d2a6d346ee7",
+  "phase3_financial_assumption_fingerprint_sha256": "b953c02d3fdcfacc62d9e6755889040e9f8bd12db7c830a88c79f5c991267e70",
+  "phase4_policy_fingerprint_sha256": "1998cc4a68c88160f01d89ca0abfe7c2ae955d912181b872556c149e5201af3c",
+  "prohibited_local_only_files": [
+    "outputs/phase4/local_only/account_routing_decisions.csv",
+    "outputs/phase4/local_only/cohort_dispositions.csv",
+    "outputs/phase4/local_only/root_coordination.csv"
+  ],
+  "reference_discount_tier": "medium_15pct",
+  "reference_scenario": "base",
+  "source_sha256": "6863ea0014f050355bf9e0c5166e2284edfe8521ea3d87a2a2fa168177a229bc",
+  "version": "phase4-to-phase5-v2"
+}

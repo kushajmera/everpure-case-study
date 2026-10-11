@@ -1,0 +1,233 @@
+{
+  "account_scenarios": {
+    "cohort_counts": {
+      "eligibility_conflict": 562,
+      "eligibility_unknown": 294,
+      "primary_reported_2y": 1144
+    },
+    "primary_accounts": 1144,
+    "primary_prediction_rows": 10296,
+    "probability_max": 0.24333920586107016,
+    "probability_min": 0.009895328869991168,
+    "provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+    "scenario_summary": [
+      {
+        "cohort_accounts": 1144,
+        "cohort_policy": "reported_2y_scenario_cohort",
+        "expected_reactivations": 33.672238997296645,
+        "horizon_months": 3,
+        "max_probability": 0.04096339296663338,
+        "mean_probability": 0.029433775347287278,
+        "median_probability": 0.029392816836413715,
+        "min_probability": 0.019692740206537055,
+        "p10_probability": 0.022693160655767868,
+        "p90_probability": 0.03535970651687697,
+        "probability_provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+        "scenario_name": "base",
+        "scenario_parameter_version": "phase2-assumptions-v1"
+      },
+      {
+        "cohort_accounts": 1144,
+        "cohort_policy": "reported_2y_scenario_cohort",
+        "expected_reactivations": 66.3296533784821,
+        "horizon_months": 6,
+        "max_probability": 0.08024878636992791,
+        "mean_probability": 0.05798046623993191,
+        "median_probability": 0.05792169599124844,
+        "min_probability": 0.038997676396231924,
+        "p10_probability": 0.04487134177098725,
+        "p90_probability": 0.06946910418879425,
+        "probability_provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+        "scenario_name": "base",
+        "scenario_parameter_version": "phase2-assumptions-v1"
+      },
+      {
+        "cohort_accounts": 1144,
+        "cohort_policy": "reported_2y_scenario_cohort",
+        "expected_reactivations": 128.72404375214177,
+        "horizon_months": 12,
+        "max_probability": 0.15405770502600952,
+        "mean_probability": 0.11252101726585818,
+        "median_probability": 0.11248846911599428,
+        "min_probability": 0.07647453402815861,
+        "p10_probability": 0.08772924622964576,
+        "p90_probability": 0.13411225194079496,
+        "probability_provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+        "scenario_name": "base",
+        "scenario_parameter_version": "phase2-assumptions-v1"
+      },
+      {
+        "cohort_accounts": 1144,
+        "cohort_policy": "reported_2y_scenario_cohort",
+        "expected_reactivations": 16.96496519779854,
+        "horizon_months": 3,
+        "max_probability": 0.020695855704997733,
+        "mean_probability": 0.014829515033040683,
+        "median_probability": 0.01480601749524156,
+        "min_probability": 0.009895328869991168,
+        "p10_probability": 0.01141169370448644,
+        "p90_probability": 0.017838967641699285,
+        "probability_provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+        "scenario_name": "conservative",
+        "scenario_parameter_version": "phase2-assumptions-v1"
+      },
+      {
+        "cohort_accounts": 1144,
+        "cohort_policy": "reported_2y_scenario_cohort",
+        "expected_reactivations": 33.67223899729664,
+        "horizon_months": 6,
+        "max_probability": 0.040963392966633365,
+        "mean_probability": 0.02943377534728727,
+        "median_probability": 0.0293928168364137,
+        "min_probability": 0.019692740206537038,
+        "p10_probability": 0.022693160655767868,
+        "p90_probability": 0.03535970651687696,
+        "probability_provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+        "scenario_name": "conservative",
+        "scenario_parameter_version": "phase2-assumptions-v1"
+      },
+      {
+        "cohort_accounts": 1144,
+        "cohort_policy": "reported_2y_scenario_cohort",
+        "expected_reactivations": 66.3296533784821,
+        "horizon_months": 12,
+        "max_probability": 0.08024878636992791,
+        "mean_probability": 0.05798046623993191,
+        "median_probability": 0.05792169599124844,
+        "min_probability": 0.038997676396231924,
+        "p10_probability": 0.04487134177098725,
+        "p90_probability": 0.06946910418879425,
+        "probability_provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+        "scenario_name": "conservative",
+        "scenario_parameter_version": "phase2-assumptions-v1"
+      },
+      {
+        "cohort_accounts": 1144,
+        "cohort_policy": "reported_2y_scenario_cohort",
+        "expected_reactivations": 55.554657090740726,
+        "horizon_months": 3,
+        "max_probability": 0.06733579756493693,
+        "mean_probability": 0.048561763191206926,
+        "median_probability": 0.04850647960625998,
+        "min_probability": 0.032605312463253946,
+        "p10_probability": 0.03753510777641267,
+        "p90_probability": 0.05823546641575129,
+        "probability_provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+        "scenario_name": "optimistic",
+        "scenario_parameter_version": "phase2-assumptions-v1"
+      },
+      {
+        "cohort_accounts": 1144,
+        "cohort_policy": "reported_2y_scenario_cohort",
+        "expected_reactivations": 108.34813424607306,
+        "horizon_months": 6,
+        "max_probability": 0.1301374854961677,
+        "mean_probability": 0.09470990755775617,
+        "median_probability": 0.09466008064872745,
+        "min_probability": 0.06414751852568149,
+        "p10_probability": 0.07366133123703843,
+        "p90_probability": 0.11307956328284248,
+        "probability_provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+        "scenario_name": "optimistic",
+        "scenario_parameter_version": "phase2-assumptions-v1"
+      },
+      {
+        "cohort_accounts": 1144,
+        "cohort_policy": "reported_2y_scenario_cohort",
+        "expected_reactivations": 206.20502499045693,
+        "horizon_months": 12,
+        "max_probability": 0.24333920586107016,
+        "mean_probability": 0.18024914771893089,
+        "median_probability": 0.1803596304290314,
+        "min_probability": 0.12418013291836033,
+        "p10_probability": 0.14189667075446422,
+        "p90_probability": 0.21337213893344664,
+        "probability_provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+        "scenario_name": "optimistic",
+        "scenario_parameter_version": "phase2-assumptions-v1"
+      }
+    ]
+  },
+  "analysis_as_of_date": "2026-10-09",
+  "source_sha256": "6863ea0014f050355bf9e0c5166e2284edfe8521ea3d87a2a2fa168177a229bc",
+  "synthetic_cox": {
+    "coefficients": [
+      {
+        "covariate": "health_proxy",
+        "estimated_hazard_ratio": 1.6575464191015854,
+        "estimated_log_hazard_coefficient": 0.5053384481768867,
+        "hazard_ratio_ci_lower_95": 1.4696900280179477,
+        "hazard_ratio_ci_upper_95": 1.8694146922815869,
+        "interpretation": "higher instantaneous hazard",
+        "provenance": "SYNTHETIC_METHODOLOGY",
+        "standard_error": 0.06137201288604013,
+        "true_generating_coefficient": 0.45
+      },
+      {
+        "covariate": "engagement_proxy",
+        "estimated_hazard_ratio": 0.697811699256254,
+        "estimated_log_hazard_coefficient": -0.35980598445391065,
+        "hazard_ratio_ci_lower_95": 0.6561540239197464,
+        "hazard_ratio_ci_upper_95": 0.7421141223976675,
+        "interpretation": "lower instantaneous hazard",
+        "provenance": "SYNTHETIC_METHODOLOGY",
+        "standard_error": 0.03140554676949988,
+        "true_generating_coefficient": -0.35
+      },
+      {
+        "covariate": "partner_proxy",
+        "estimated_hazard_ratio": 1.2467436307353412,
+        "estimated_log_hazard_coefficient": 0.22053505673671325,
+        "hazard_ratio_ci_lower_95": 1.1057863016593994,
+        "hazard_ratio_ci_upper_95": 1.4056691409963882,
+        "interpretation": "higher instantaneous hazard",
+        "provenance": "SYNTHETIC_METHODOLOGY",
+        "standard_error": 0.061214588919981,
+        "true_generating_coefficient": 0.25
+      }
+    ],
+    "diagnostics": {
+      "baseline_survival_at_last_event": 0.17979382368764188,
+      "baseline_survival_monotone": true,
+      "baseline_survival_reference_profile": "lifelines mean covariate profile",
+      "concordance_in_sample": 0.6238576893605554,
+      "concordance_independent_synthetic_holdout": 0.5953205167830871,
+      "converged": true,
+      "convergence_warnings": [],
+      "fit_status": "converged",
+      "n_events": 1074,
+      "n_right_censored": 526,
+      "numerical_warnings": [],
+      "ph_rejections_at_0_05": [],
+      "ph_schoenfeld_rank_p_values": {
+        "engagement_proxy": 0.2523688837220447,
+        "health_proxy": 0.28328716869220194,
+        "partner_proxy": 0.939195015702955
+      },
+      "provenance": "SYNTHETIC_METHODOLOGY",
+      "warnings": []
+    },
+    "generation": {
+      "baseline_hazard_per_month": 0.035,
+      "censoring": "independent Uniform(8,48) months capped at 36 months",
+      "covariates": "health_proxy~Bernoulli(.4); engagement_proxy~Normal(0,1); partner_proxy~Bernoulli(.5)",
+      "duration_max_months": 36.0,
+      "duration_median_months": 11.973232684670094,
+      "duration_min_months": 0.00025589340187000866,
+      "event_fraction": 0.67125,
+      "events": 1074,
+      "month_definition": "continuous simulation time unit",
+      "provenance": "SYNTHETIC_METHODOLOGY",
+      "right_censored": 526,
+      "seed": 20261009,
+      "study_origin": "synthetic enrollment t=0",
+      "subjects": 1600,
+      "true_generating_coefficients": {
+        "engagement_proxy": -0.35,
+        "health_proxy": 0.45,
+        "partner_proxy": 0.25
+      }
+    },
+    "provenance": "SYNTHETIC_METHODOLOGY"
+  }
+}

@@ -1,0 +1,14 @@
+measure,account_count,population_denominator_accounts,policy_version,reference_scenario,reference_discount_tier,limitation
+evidence_CRITICAL_UNRESOLVED,497,1144,phase4-routing-policy-v2,base,medium_15pct,PROVISIONAL_PLANNING_ONLY
+evidence_MATERIAL_REVIEW,601,1144,phase4-routing-policy-v2,base,medium_15pct,PROVISIONAL_PLANNING_ONLY
+evidence_RELATIVELY_COMPLETE,46,1144,phase4-routing-policy-v2,base,medium_15pct,PROVISIONAL_PLANNING_ONLY
+execution_authorized,0,1144,phase4-routing-policy-v2,base,medium_15pct,PROVISIONAL_PLANNING_ONLY
+health_review_required,703,1144,phase4-routing-policy-v2,base,medium_15pct,PROVISIONAL_PLANNING_ONLY
+high_priority_health_unknown,187,288,phase4-routing-policy-v2,base,medium_15pct,HIGH_ILLUSTRATIVE_PRIORITY_MISSINGNESS
+high_priority_partner_unknown,23,288,phase4-routing-policy-v2,base,medium_15pct,HIGH_ILLUSTRATIVE_PRIORITY_MISSINGNESS
+high_priority_ticket_sentinel,53,288,phase4-routing-policy-v2,base,medium_15pct,HIGH_ILLUSTRATIVE_PRIORITY_MISSINGNESS
+high_priority_ticket_unknown,53,288,phase4-routing-policy-v2,base,medium_15pct,HIGH_ILLUSTRATIVE_PRIORITY_MISSINGNESS
+partner_review_required,367,1144,phase4-routing-policy-v2,base,medium_15pct,PROVISIONAL_PLANNING_ONLY
+root_coordination_required,1131,1144,phase4-routing-policy-v2,base,medium_15pct,PROVISIONAL_PLANNING_ONLY
+service_recovery_required,381,1144,phase4-routing-policy-v2,base,medium_15pct,PROVISIONAL_PLANNING_ONLY
+ticket_review_required,591,1144,phase4-routing-policy-v2,base,medium_15pct,PROVISIONAL_PLANNING_ONLY

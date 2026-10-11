@@ -1,0 +1,4 @@
+covariate,estimated_log_hazard_coefficient,estimated_hazard_ratio,standard_error,hazard_ratio_ci_lower_95,hazard_ratio_ci_upper_95,true_generating_coefficient,interpretation,provenance
+health_proxy,0.505338448177,1.6575464191,0.061372012886,1.46969002802,1.86941469228,0.45,higher instantaneous hazard,SYNTHETIC_METHODOLOGY
+engagement_proxy,-0.359805984454,0.697811699256,0.0314055467695,0.65615402392,0.742114122398,-0.35,lower instantaneous hazard,SYNTHETIC_METHODOLOGY
+partner_proxy,0.220535056737,1.24674363074,0.06121458892,1.10578630166,1.405669141,0.25,higher instantaneous hazard,SYNTHETIC_METHODOLOGY

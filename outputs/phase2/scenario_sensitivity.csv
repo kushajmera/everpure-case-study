@@ -1,0 +1,34 @@
+horizon_months,cohort_accounts,expected_reactivations,mean_probability,sensitivity_case,cohort_policy,baseline_hazard_multiplier,effect_scale,unknown_health_log_effect,unknown_health_effect_basis
+3,1144,16.9649651978,0.014829515033,half_baseline_hazard,reported_2y_scenario_cohort,0.5,1,0,assumed reference or named health level
+6,1144,33.6722389973,0.0294337753473,half_baseline_hazard,reported_2y_scenario_cohort,0.5,1,0,assumed reference or named health level
+12,1144,66.3296533785,0.0579804662399,half_baseline_hazard,reported_2y_scenario_cohort,0.5,1,0,assumed reference or named health level
+3,1144,36.7970564328,0.0321652591195,half_covariate_effects,reported_2y_scenario_cohort,1,0.5,0,assumed reference or named health level
+6,1144,72.4032298618,0.0632895365924,half_covariate_effects,reported_2y_scenario_cohort,1,0.5,0,assumed reference or named health level
+12,1144,140.196735066,0.122549593589,half_covariate_effects,reported_2y_scenario_cohort,1,0.5,0,assumed reference or named health level
+3,2000,58.9076015855,0.0294538007928,hypothetical_include_all_including_unknown,hypothetical_include_all,1,1,0,assumed reference or named health level
+6,2000,116.037116548,0.058018558274,hypothetical_include_all_including_unknown,hypothetical_include_all,1,1,0,assumed reference or named health level
+12,2000,225.179677433,0.112589838716,hypothetical_include_all_including_unknown,hypothetical_include_all,1,1,0,assumed reference or named health level
+3,1706,50.1944570889,0.0294223077895,hypothetical_include_conflicts,hypothetical_include_conflicts,1,1,0,assumed reference or named health level
+6,1706,98.8757208937,0.0579576324113,hypothetical_include_conflicts,hypothetical_include_conflicts,1,1,0,assumed reference or named health level
+12,1706,191.883767298,0.112475830773,hypothetical_include_conflicts,hypothetical_include_conflicts,1,1,0,assumed reference or named health level
+3,1144,50.1258224871,0.0438162783979,one_and_half_baseline_hazard,reported_2y_scenario_cohort,1.5,1,0,assumed reference or named health level
+6,1144,98.0034974399,0.085667392867,one_and_half_baseline_hazard,reported_2y_scenario_cohort,1.5,1,0,assumed reference or named health level
+12,1144,187.421612134,0.163830080537,one_and_half_baseline_hazard,reported_2y_scenario_cohort,1.5,1,0,assumed reference or named health level
+3,1144,30.9912639364,0.0270902656787,one_and_half_covariate_effects,reported_2y_scenario_cohort,1,1.5,0,assumed reference or named health level
+6,1144,61.0989723267,0.0534081925933,one_and_half_covariate_effects,reported_2y_scenario_cohort,1,1.5,0,assumed reference or named health level
+12,1144,118.768248254,0.103818398823,one_and_half_covariate_effects,reported_2y_scenario_cohort,1,1.5,0,assumed reference or named health level
+3,1144,33.6722389973,0.0294337753473,primary_base,reported_2y_scenario_cohort,1,1,0,assumed reference or named health level
+6,1144,66.3296533785,0.0579804662399,primary_base,reported_2y_scenario_cohort,1,1,0,assumed reference or named health level
+12,1144,128.724043752,0.112521017266,primary_base,reported_2y_scenario_cohort,1,1,0,assumed reference or named health level
+3,1144,29.2286603718,0.025549528297,unknown_health_as_red,reported_2y_scenario_cohort,1,1,-0.35,assumed reference or named health level
+6,1144,57.6867011505,0.0504254380686,unknown_health_as_red,reported_2y_scenario_cohort,1,1,-0.35,assumed reference or named health level
+12,1144,112.374350027,0.0982293269466,unknown_health_as_red,reported_2y_scenario_cohort,1,1,-0.35,assumed reference or named health level
+3,1144,31.5816496622,0.0276063371173,unknown_health_as_yellow,reported_2y_scenario_cohort,1,1,-0.15,assumed reference or named health level
+6,1144,62.2737605669,0.0544351053906,unknown_health_as_yellow,reported_2y_scenario_cohort,1,1,-0.15,assumed reference or named health level
+12,1144,121.090877277,0.105848668948,unknown_health_as_yellow,reported_2y_scenario_cohort,1,1,-0.15,assumed reference or named health level
+3,1144,31.3583676293,0.0274111605152,unknown_health_observed_average,reported_2y_scenario_cohort,1,1,-0.167391304348,observed primary-cohort health mix weighted by assumed effects
+6,1144,61.8394858735,0.0540554946446,unknown_health_observed_average,reported_2y_scenario_cohort,1,1,-0.167391304348,observed primary-cohort health mix weighted by assumed effects
+12,1144,120.269457997,0.105130645102,unknown_health_observed_average,reported_2y_scenario_cohort,1,1,-0.167391304348,observed primary-cohort health mix weighted by assumed effects
+3,1144,40.4515042553,0.0353597065169,zero_covariate_effects,reported_2y_scenario_cohort,1,0,0,assumed reference or named health level
+6,1144,79.472655192,0.0694691041888,zero_covariate_effects,reported_2y_scenario_cohort,1,0,0,assumed reference or named health level
+12,1144,153.42441622,0.134112251941,zero_covariate_effects,reported_2y_scenario_cohort,1,0,0,assumed reference or named health level

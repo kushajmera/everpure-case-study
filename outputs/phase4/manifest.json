@@ -1,0 +1,27 @@
+{
+  "local_only": {
+    "account_routing_decisions.csv": "e8a0a11f6c7ec7064451d5c7403c0ce5db260917e1b79947754a178f8e1e2a22",
+    "cohort_dispositions.csv": "927bb80d8a3dd0aecc9fd77ab360814476d37c62cfb8f34526f9d2c32cba900b",
+    "root_coordination.csv": "a2435f18ca78a2cdb48ca0b18695164f9b3a0cafdf60aae9a21064d0ecf9841f"
+  },
+  "notebook": {
+    "classification": "AGGREGATE_AND_SYNTHETIC_ONLY",
+    "path": "notebooks/04_gtm_routing.ipynb",
+    "sha256": "2a892adc273aa358b67a3680d0e6c5b228283e3a28bace47a397b6d6abf9eb53"
+  },
+  "policy_fingerprint_sha256": "1998cc4a68c88160f01d89ca0abfe7c2ae955d912181b872556c149e5201af3c",
+  "safe": {
+    "cohort_reconciliation_summary.csv": "ebc44be473793eceb35d80847fe02fdf954d34f5af389971ff087b87dd134c9d",
+    "commercial_priority_summary.csv": "bf9c66e5a75c53c75bdfe5a560fe506e421111255033c40762a072e635013f0e",
+    "data_readiness_summary.csv": "2733411ac941d7cc228e58783fc68b2b1c08c08c8142b17d8155147dab084b45",
+    "metrics.json": "39f6cb3c1d34fc3296f84cc2261d3358cab99d93affbceec338d2aad9e8a7151",
+    "phase5_input_contract.json": "89bfe72319e31112fa64b837b741e664278ab919d45c8f6ad3614adc2613398a",
+    "priority_evidence_summary.csv": "816a0a12c840d714bd35be186494edf4d20ecf9b1254725afdd07e8aa62fa13f",
+    "root_coordination_summary.csv": "5479ffa59e1760cd26c6972e4a74a5b02ca5aaa43a8508cb6c94106d64fe3f97",
+    "routing_channel_summary.csv": "057c3b7310d02196b155e4116c53ff8522219f62d3a80a0b7c70a6e2518bc0be",
+    "routing_rule_counts.csv": "bee0056c5abd94493ca42d9846fa0b5b3d3e30a83c30bd90d3e2adfcdfe033f9",
+    "scenario_priority_sensitivity.csv": "7e23b399407bd055d6ff1abd001d67cb0d803b623f28f3c138950bf19ba50929",
+    "service_barrier_summary.csv": "9957dce87eb8849b31188d0bd07771b7b04f779cd497382d781f036532a9d21b"
+  },
+  "version": "phase4-artifact-manifest-v2"
+}

@@ -1,0 +1,200 @@
+"""Build the concise Phase 1 notebook from reusable pipeline calls."""
+
+from pathlib import Path
+
+import nbformat as nbf
+
+ROOT = Path(__file__).resolve().parents[1]
+
+cells = [
+    nbf.v4.new_markdown_cell(
+        "# Everpure | Install base monetization — Phase 1\n"
+        "**Observed-data foundation, as of 2026-10-09.** This notebook covers source hygiene, "
+        "hierarchy, synthetic-date diagnostics, descriptive SQL, and a separate synthetic "
+        "revenue-decay demonstration. The business brief defines dormancy "
+        "using two fiscal years; the fiscal boundary is unavailable. Historical spend is a "
+        "recorded source field, not recoverable revenue."
+    ),
+    nbf.v4.new_code_cell(
+        "from pathlib import Path\n"
+        "import sys\n"
+        "ROOT = Path.cwd().resolve()\n"
+        "if ROOT.name == 'notebooks':\n    ROOT = ROOT.parent\n"
+        "sys.path.insert(0, str(ROOT / 'src'))\n"
+        "import pandas as pd\n"
+        "import matplotlib.pyplot as plt\n"
+        "from IPython.display import Markdown, display\n"
+        "from everpure_case.config import SOURCE_COLUMNS\n"
+        "from everpure_case.ingestion import read_source\n"
+        "from everpure_case.pipeline import run_pipeline\n"
+        "from everpure_case.synthetic_demo import LABEL, run_synthetic_demo\n"
+        "OUT = ROOT / 'outputs' / 'phase1'\n"
+        "metrics = run_pipeline(ROOT)\n"
+        "raw = read_source(ROOT / 'data/raw/Case_Study_1_Install_Base_Reactivation.csv')\n"
+        "display(Markdown(f\"**Source:** {metrics['source_rows']:,} rows; "
+        "{metrics['unique_account_ids']:,} unique IDs; "
+        "SHA-256 `{metrics['source_sha256']}`.\"))"
+    ),
+    nbf.v4.new_markdown_cell(
+        "## 1. Source contract and cleaning\n"
+        "The source fields remain intact in the cleaned output. "
+        "Typed and normalized columns are appended."
+    ),
+    nbf.v4.new_code_cell(
+        "display(pd.DataFrame({'source_column': SOURCE_COLUMNS, "
+        "'nonempty_rows': [raw[c].ne('').sum() for c in SOURCE_COLUMNS], "
+        "'distinct_raw_values': [raw[c].nunique() for c in SOURCE_COLUMNS]}))\n"
+        "clean = pd.read_csv(OUT / 'cleaned_accounts.csv')\n"
+        "display(clean[['account_id', 'region', 'region_clean', 'sfdc_health_score', "
+        "'health_clean', 'partner_managed', 'partner_managed_clean', "
+        "'open_support_tickets', 'tickets_clean']].head())"
+    ),
+    nbf.v4.new_code_cell(
+        "exceptions = pd.read_csv(OUT / 'data_quality_exceptions.csv')\n"
+        "display(exceptions.groupby(['issue_code', 'resolution']).size()"
+        ".rename('exception_rows').reset_index().sort_values('exception_rows', ascending=False))\n"
+        "account_quality = pd.read_csv(OUT / 'account_quality_summary.csv')\n"
+        "display(account_quality[['account_id', 'exception_count', 'manual_review_count', "
+        "'left_unknown_count', 'auto_resolved_count']].sort_values("
+        "'exception_count', ascending=False).head())\n"
+        'display(Markdown(f"**Unique accounts with at least one exception:** '
+        "{metrics['accounts_with_quality_exceptions']:,}.\"))"
+    ),
+    nbf.v4.new_markdown_cell(
+        "## 2. Inactivity and date forensics\nCalendar eligibility means last booking on or "
+        "before 2024-10-09. It is a proxy, not confirmed two-fiscal-year eligibility. "
+        "The source-reported years are a separate definition; an unknown comparison is "
+        "not an agreement. In every source row, booking date equals 2019-01-01 plus "
+        "(numeric account ID - 1000) days, and contract start is 365 days earlier. "
+        "Date-window outputs therefore collapse to ID arithmetic and are diagnostics only."
+    ),
+    nbf.v4.new_code_cell(
+        "recon = pd.read_csv(OUT / 'inactivity_reconciliation.csv')\n"
+        "display(recon)\n"
+        "sensitivity = pd.read_csv(OUT / 'analysis_date_sensitivity.csv')\n"
+        "display(sensitivity)\n"
+        "display(clean['eligibility_comparison_status'].value_counts())\n"
+        "display(Markdown(f\"Booking dates: **{metrics['booking_min']} to "
+        "{metrics['booking_max']}**. Daily sequence: **{metrics['booking_sequential_daily']}**. "
+        "Contract to booking gap: **{metrics['contract_to_booking_days_unique']} days** "
+        "for every row. Exact date/ID sequence: "
+        "**{metrics['booking_date_exact_account_id_sequence']}**. "
+        "Definition conflicts: **{metrics['eligibility_disagreement_rows']:,}**.\"))"
+    ),
+    nbf.v4.new_markdown_cell(
+        "## 3. Hierarchy and additive spend proxy\nThe resolver handles multiple levels "
+        "within Python's recursion limit. Group totals sum each source row once; "
+        "they are **not verified consolidated revenue**. For 291 of 298 referenced "
+        "parents, parent-row spend is below direct-child spend sum. This argues against "
+        "simple full-child inclusion, without establishing the true accounting rule."
+    ),
+    nbf.v4.new_code_cell(
+        "hierarchy = pd.read_csv(OUT / 'account_hierarchy.csv')\n"
+        "parents = pd.read_csv(OUT / 'parent_spend_summary.csv')\n"
+        "parent_comparison = pd.read_csv(OUT / 'parent_child_spend_comparison.csv')\n"
+        "display(hierarchy.hierarchy_status.value_counts().rename('account_rows').to_frame())\n"
+        "display(parents[['root_account_id', 'account_count', 'direct_child_count', "
+        "'additive_recorded_spend_usd', 'mean_recorded_spend_per_account_usd', "
+        "'region_count', "
+        "'partner_ownership_conflict']].head(10))"
+    ),
+    nbf.v4.new_markdown_cell(
+        "## 4. DuckDB source diagnostics\nSQL files execute against cleaned accounts "
+        "and a one-to-one hierarchy mapping. `LAG` and `LEAD` compare adjacent "
+        "*accounts' single last-booking dates* within a group. Here their date gaps "
+        "equal account-ID differences, so they are not behavioral frequency or decay."
+    ),
+    nbf.v4.new_code_cell(
+        "display(Markdown('### Booking-window SQL\\n```sql\\n' + "
+        "(ROOT / 'sql/window_analytics.sql').read_text(encoding='utf-8') + '\\n```'))\n"
+        "spend = pd.read_csv(OUT / 'spend_concentration.csv')\n"
+        "region = pd.read_csv(OUT / 'regional_spend.csv')\n"
+        "opportunity = pd.read_csv(OUT / 'account_opportunity.csv')\n"
+        "window = pd.read_csv(OUT / 'window_analytics.csv')\n"
+        "display(region[['region', 'account_count', 'recorded_spend_usd', 'spend_share']])\n"
+        "display(opportunity[['account_id', 'root_account_id', 'recorded_spend_usd', "
+        "'region_recorded_spend_rank', 'ownership_unresolved', 'health_unknown', "
+        "'eligibility_comparison_status']].head(10))\n"
+        "display(window[['root_account_id', 'account_id', 'booking_date', "
+        "'previous_account_booking_date', 'days_since_previous_account_booking', "
+        "'recency_rank_within_root']].head(10))"
+    ),
+    nbf.v4.new_markdown_cell(
+        "## 5. Controlled longitudinal SQL demonstration\n"
+        "**SYNTHETIC METHODOLOGY DEMONSTRATION — NOT OBSERVED EVERPURE REVENUE.** "
+        "The separate fixture has four invented fiscal periods, a missing period, "
+        "an observed zero, and additive parent-child revenue by fixture assumption. "
+        "Consecutive percentage change is suppressed over a period gap or zero baseline; "
+        "signed USD change per elapsed fiscal period is a separately labeled measure. "
+        "No synthetic value enters the real CSV outputs."
+    ),
+    nbf.v4.new_code_cell(
+        "synthetic_account, synthetic_root = run_synthetic_demo(ROOT)\n"
+        "display(Markdown('**' + LABEL + '**'))\n"
+        "display(synthetic_account.loc[(synthetic_account.account_id.isin("
+        "['SYN_A', 'SYN_B', 'SYN_C'])) & "
+        "(synthetic_account.fiscal_period_index.isin([2, 4])), "
+        "['account_id', 'fiscal_period_index', 'period_revenue_usd', "
+        "'previous_revenue_usd', 'elapsed_periods', 'absolute_change_usd', "
+        "'consecutive_pct_change', 'signed_change_usd_per_period', "
+        "'comparison_status']])\n"
+        "display(synthetic_root.loc[synthetic_root.root_account_id.eq('SYN_R1'), "
+        "['fiscal_period_index', 'observed_account_count', 'expected_account_count', "
+        "'observed_partial_revenue_usd', 'root_revenue_usd', "
+        "'consecutive_pct_change', 'comparison_status']])"
+    ),
+    nbf.v4.new_markdown_cell("## 6. Core descriptive figures"),
+    nbf.v4.new_code_cell(
+        "fig, axes = plt.subplots(1, 2, figsize=(12, 4.3))\n"
+        "axes[0].barh(region['region'][::-1], region['recorded_spend_usd'][::-1] / 1e6, "
+        "color='#287a78')\n"
+        "axes[0].set_xlabel('Recorded historical spend (USD millions)')\n"
+        "axes[0].set_title('Account-native region')\n"
+        "axes[1].bar(recon['source_reported_2y'], recon['account_rows'], color='#d69854')\n"
+        "axes[1].set_ylabel('Account rows')\n"
+        "axes[1].set_title('Source-reported 2-year status')\n"
+        "fig.suptitle('Descriptive source measures | 2026-10-09')\n"
+        "fig.tight_layout()\n"
+        "plt.show()"
+    ),
+    nbf.v4.new_code_cell(
+        "total = metrics['raw_recorded_spend_usd']\n"
+        "top10 = spend.head(10)['additive_recorded_spend_usd'].sum() / total\n"
+        "france_share = region.loc[region.region.eq('EMEA - France'), 'spend_share'].iloc[0]\n"
+        "display(Markdown(\n"
+        "    f'### Commercial reading\\n'\n"
+        "    f'- Top 10 account groups hold **{top10:.1%}** of additive recorded spend.\\n'\n"
+        "    f'- France has **{france_share:.1%}** '"
+        "    'of account-native recorded spend.\\n'\n"
+        "    f'- **{metrics[\"parent_partner_conflict_groups\"]:,}** parent groups mix known '"
+        "    'partner ownership states; metadata needs review before assignment.\\n'\n"
+        "    '- Source date sequencing and reported inactivity disagreement limit '"
+        "    'any operational eligibility claim.'\n"
+        "))"
+    ),
+    nbf.v4.new_markdown_cell(
+        "## 7. Modeling implications\nThe real CSV has no account-period revenue, reactivation "
+        "outcome or event time, timestamped ticket history, fiscal calendar, confirmed group "
+        "consolidation rules, campaign costs, margins, or renewal assumptions. "
+        "`sql/longitudinal_decay_template.sql` documents the missing real-data grain; "
+        "it is intentionally not executed. The separate synthetic SQL demonstrates "
+        "methodology only. `has_manual_review_exceptions=False` is quality triage, "
+        "not outreach readiness; unknown required fields and fiscal eligibility need "
+        "future fail-closed gates. Survival, Monte Carlo, and routing are outside Phase 1."
+    ),
+]
+
+for index, cell in enumerate(cells):
+    cell.id = f"phase1-{index:02d}"
+
+notebook = nbf.v4.new_notebook(
+    cells=cells,
+    metadata={
+        "kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"},
+        "language_info": {"name": "python", "version": "3.12"},
+    },
+)
+path = ROOT / "notebooks/01_data_foundation.ipynb"
+path.parent.mkdir(exist_ok=True)
+nbf.write(notebook, path)
+print(path)

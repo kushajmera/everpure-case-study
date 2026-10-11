@@ -1,0 +1,50 @@
+{
+  "account_order": "account_id then root_account_id ascending",
+  "activation_cost_per_reactivation": 200.0,
+  "activation_cost_timing": "Once at exact continuous first-event time T when T <= 12",
+  "annual_effective_financial_discount_rate": 0.12,
+  "assessment_brief_status": "Original CandidateAssessmentPackageEverpure.pdf page 2 externally located and verified: requires 1,000 Monte Carlo runs and three discount scenarios; does not prescribe financial inputs, horizon or offer percentages",
+  "commercial_discount_tiers": {
+    "high_30pct": 0.3,
+    "low_5pct": 0.05,
+    "medium_15pct": 0.15
+  },
+  "continuous_month_definition": "One abstract continuous model month; no exact calendar-day mapping",
+  "contribution_margin": 0.6,
+  "counterfactual_policy": "No untreated arm or causal campaign uplift estimated",
+  "currency": "USD",
+  "eligibility_policy": "Provisional source-reported two-year cohort, not confirmed fiscal-year eligibility",
+  "fingerprint_sha256": "b953c02d3fdcfacc62d9e6755889040e9f8bd12db7c830a88c79f5c991267e70",
+  "horizon_months": 12,
+  "missing_feature_policy": "Phase 2 reference-level scoring with explicit missingness flags",
+  "monthly_gross_revenue_per_reactivated_account": 1000.0,
+  "numpy_bit_generator": "PCG64",
+  "ongoing_servicing_costs": "Included in contribution margin; no second servicing cost",
+  "outreach_cost_per_target": 100.0,
+  "outreach_cost_timing": "Every targeted account at month zero regardless of event",
+  "parameter_uncertainty_policy": "Fixed assumptions; Monte Carlo varies first-event randomness only",
+  "phase2_assumption_fingerprint_sha256": "6195ba2e90c95976ed91b7bdd42509341fd22e71e6b2bb5aed2e5d2a6d346ee7",
+  "phase2_contract_version": "phase2-to-phase3-v2",
+  "provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+  "reporting_label": "ILLUSTRATIVE_NET_PROGRAM_NPV_NOT_CAUSALLY_ATTRIBUTED",
+  "retention_policy": "Retained through month 12 following reactivation; no churn in primary model",
+  "revenue_collection_rule": "End of eligible service month m, m=1..12",
+  "revenue_recognition_rule": "Full service month m only when first event T <= m-1; no proration",
+  "root_dependence_policy": "Conditionally independent account first-event draws; root dependence unestimated",
+  "scenario_random_number_policy": "Shared independent account-by-replication uniforms across hazards; identical event times across price tiers",
+  "seed": 20261009,
+  "simulations_per_cell": 1000,
+  "source_discount_attribute_context": {
+    "field": "discount_tier_pct",
+    "full_source_range_pct": [
+      5.0,
+      65.0
+    ],
+    "primary_cohort_mean_pct": 34.8583916083916,
+    "provenance": "OBSERVED_SOURCE for field; DERIVED_SOURCE for primary-cohort mean",
+    "used_as_new_offer_or_response_evidence": false
+  },
+  "source_sha256": "6863ea0014f050355bf9e0c5166e2284edfe8521ea3d87a2a2fa168177a229bc",
+  "valuation_origin": "2026-10-09",
+  "version": "phase3-financial-assumptions-v1"
+}

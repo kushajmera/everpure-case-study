@@ -1,0 +1,81 @@
+{
+  "account_reconciliation_tolerance": "min(0.001, 1e-8 + 2e-12 * max(1, abs(scale))) USD",
+  "cells": [
+    {
+      "analytic_expected_npv": 66866.13889237744,
+      "commercial_discount_tier": "low_5pct",
+      "mc_standard_error": 850.5935187797616,
+      "mean_npv": 68469.19221221475,
+      "reactivation_scenario": "conservative",
+      "standardized_discrepancy": 1.8846291259507983
+    },
+    {
+      "analytic_expected_npv": 46464.53652938177,
+      "commercial_discount_tier": "medium_15pct",
+      "mc_standard_error": 756.8186718883505,
+      "mean_npv": 47890.08921877691,
+      "reactivation_scenario": "conservative",
+      "standardized_discrepancy": 1.8836119434503735
+    },
+    {
+      "analytic_expected_npv": 15862.132984888249,
+      "commercial_discount_tier": "high_30pct",
+      "mc_standard_error": 616.1809459966871,
+      "mean_npv": 17021.434728620145,
+      "reactivation_scenario": "conservative",
+      "standardized_discrepancy": 1.8814306921754909
+    },
+    {
+      "analytic_expected_npv": 241533.34669518872,
+      "commercial_discount_tier": "low_5pct",
+      "mc_standard_error": 1152.3391671378965,
+      "mean_npv": 243113.09877245827,
+      "reactivation_scenario": "base",
+      "standardized_discrepancy": 1.370908949656919
+    },
+    {
+      "analytic_expected_npv": 201501.65868186974,
+      "commercial_discount_tier": "medium_15pct",
+      "mc_standard_error": 1025.4599431065083,
+      "mean_npv": 202912.46591627598,
+      "reactivation_scenario": "base",
+      "standardized_discrepancy": 1.3757799550242467
+    },
+    {
+      "analytic_expected_npv": 141454.12666189123,
+      "commercial_discount_tier": "high_30pct",
+      "mc_standard_error": 835.176111236983,
+      "mean_npv": 142611.51663200257,
+      "reactivation_scenario": "base",
+      "standardized_discrepancy": 1.3858034904723568
+    },
+    {
+      "analytic_expected_npv": 464630.7252444616,
+      "commercial_discount_tier": "low_5pct",
+      "mc_standard_error": 1403.340864575066,
+      "mean_npv": 465794.18463659706,
+      "reactivation_scenario": "optimistic",
+      "standardized_discrepancy": 0.8290640011311411
+    },
+    {
+      "analytic_expected_npv": 399568.02692083875,
+      "commercial_discount_tier": "medium_15pct",
+      "mc_standard_error": 1249.0871935078308,
+      "mean_npv": 400610.1402406944,
+      "reactivation_scenario": "optimistic",
+      "standardized_discrepancy": 0.8342998993761725
+    },
+    {
+      "analytic_expected_npv": 301973.9794354045,
+      "commercial_discount_tier": "high_30pct",
+      "mc_standard_error": 1017.7501215455095,
+      "mean_npv": 302834.0736468404,
+      "reactivation_scenario": "optimistic",
+      "standardized_discrepancy": 0.8450936956213129
+    }
+  ],
+  "max_absolute_standardized_discrepancy": 1.8846291259507983,
+  "monthly_cashflow_tolerance_usd": 1e-07,
+  "version": "phase3-financial-reconciliation-v1",
+  "z_limit": 4.5
+}

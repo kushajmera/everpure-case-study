@@ -1,0 +1,113 @@
+{
+  "figures": [
+    {
+      "classification": "AGGREGATE_ONLY",
+      "path": "outputs/phase3/figures/break_even_economics.png",
+      "sha256": "a3b8e852226c396585923bfaa6448fc38b815eeb08b0816cdee9056cc3cf47f3"
+    },
+    {
+      "classification": "AGGREGATE_ONLY",
+      "path": "outputs/phase3/figures/financial_pv_bridge.png",
+      "sha256": "cbab2422cfa27c1f2359a7230d11e4c7a7c7d2e27f026faee0b0a0973bb11761"
+    },
+    {
+      "classification": "AGGREGATE_ONLY",
+      "path": "outputs/phase3/figures/financial_sensitivity.png",
+      "sha256": "cad62d92cd2aa459bc64836e7c8cd8977d03bce54d039a215fe0a5bd9641063f"
+    },
+    {
+      "classification": "AGGREGATE_ONLY",
+      "path": "outputs/phase3/figures/nine_cell_comparison.png",
+      "sha256": "b4380dde2ae9b11c7ff3e7d521af74c41c2341a71915971e9913ee26944347d5"
+    },
+    {
+      "classification": "AGGREGATE_ONLY",
+      "path": "outputs/phase3/figures/npv_distribution.png",
+      "sha256": "4473c50111b7ce5cbbb9bc396c443f2117e350d17a8ededbfb8e6d8c5311b31d"
+    },
+    {
+      "classification": "AGGREGATE_ONLY",
+      "path": "outputs/phase3/figures/npv_risk_ranges.png",
+      "sha256": "71e390a921d161086455f5a1a73859d0c3ee4eaa0a6089e41fe1675eb775d6e0"
+    }
+  ],
+  "files": [
+    {
+      "classification": "AGGREGATE",
+      "path": "outputs/phase3/discount_break_even.csv",
+      "provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+      "sha256": "1cb4a080d35897e49b1b2d8281b5d75967cbc9cf9754baf4f1a56295528d7b14"
+    },
+    {
+      "classification": "AGGREGATE",
+      "path": "outputs/phase3/financial_assumptions.json",
+      "provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+      "sha256": "9416bd5e1027d60ecbb76886b6c1eeaf4e5e0a125fd3f9199c0ea0238a4a13be"
+    },
+    {
+      "classification": "AGGREGATE",
+      "path": "outputs/phase3/financial_reconciliation.json",
+      "provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+      "sha256": "bc8be0551e394b6c6ee47217fc49f5e5869f603b92011ea9468d31d4070181c4"
+    },
+    {
+      "classification": "AGGREGATE",
+      "path": "outputs/phase3/financial_scenario_matrix.csv",
+      "provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+      "sha256": "0c614134034ded4a3d59d731ee8c50de83b440a6f0c80d72446a22089e848fd6"
+    },
+    {
+      "classification": "AGGREGATE",
+      "path": "outputs/phase3/financial_sensitivity.csv",
+      "provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+      "sha256": "6cb0a3c4cab3543a0d91d83653bc341a1df4ea484ec85673919775fd35d1d27e"
+    },
+    {
+      "classification": "AGGREGATE",
+      "path": "outputs/phase3/metrics.json",
+      "provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+      "sha256": "c76c86f7cbd673a16e392c272fe959b6a8583c970e0a18bf05fe0fd2dc763bd9"
+    },
+    {
+      "classification": "AGGREGATE",
+      "path": "outputs/phase3/monte_carlo_npv_summary.csv",
+      "provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+      "sha256": "d2b9cb1b296c13ea4cc9df6ec863afe63a889bf8e95194922f7b9e031bd9fdf4"
+    },
+    {
+      "classification": "AGGREGATE",
+      "path": "outputs/phase3/monte_carlo_run_results.csv",
+      "provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+      "sha256": "ea19234b31a7b2c95cdd3b32414204fc29c2673e6d01487c5023baf6f0abf330"
+    },
+    {
+      "classification": "AGGREGATE",
+      "path": "outputs/phase3/monthly_cashflow_summary.csv",
+      "provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+      "sha256": "d293798d681a035d5da151c3c337bbc6ef37a0914e071a510c986c674de445cb"
+    },
+    {
+      "classification": "AGGREGATE",
+      "path": "outputs/phase3/phase4_input_contract.json",
+      "provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+      "sha256": "b2ad178c69a327d969b0c40562492464b3a97984729cf58295e9c2ceb95819ec"
+    }
+  ],
+  "financial_assumption_fingerprint_sha256": "b953c02d3fdcfacc62d9e6755889040e9f8bd12db7c830a88c79f5c991267e70",
+  "local_only": {
+    "classification": "CONFIDENTIAL_LOCAL_ONLY",
+    "path": "outputs/phase3/local_only/account_economic_signals.csv",
+    "sha256": "9875115104b405b99e0e95c803f5782525a0ffd613f3528948c416463ee94b1b"
+  },
+  "notebook": {
+    "classification": "AGGREGATE_ONLY",
+    "path": "notebooks/03_monte_carlo_npv.ipynb",
+    "sha256": "7b7b991f3d5cd0f5b4eac15efcb0d791c1308865d187ecd5bba10defe235d578"
+  },
+  "numpy_version": "2.2.6",
+  "pandas_version": "2.2.3",
+  "phase2_probability_sha256": "6322a0adc58dbaa999e5523f3a17db5faaa61ca3f8a359011a6322e0466800c8",
+  "python_version": "3.12.10",
+  "source_sha256": "6863ea0014f050355bf9e0c5166e2284edfe8521ea3d87a2a2fa168177a229bc",
+  "version": "phase3-artifact-manifest-v1"
+}

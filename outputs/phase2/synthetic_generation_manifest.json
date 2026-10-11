@@ -1,0 +1,21 @@
+{
+  "baseline_hazard_per_month": 0.035,
+  "censoring": "independent Uniform(8,48) months capped at 36 months",
+  "covariates": "health_proxy~Bernoulli(.4); engagement_proxy~Normal(0,1); partner_proxy~Bernoulli(.5)",
+  "duration_max_months": 36.0,
+  "duration_median_months": 11.973232684670094,
+  "duration_min_months": 0.00025589340187000866,
+  "event_fraction": 0.67125,
+  "events": 1074,
+  "month_definition": "continuous simulation time unit",
+  "provenance": "SYNTHETIC_METHODOLOGY",
+  "right_censored": 526,
+  "seed": 20261009,
+  "study_origin": "synthetic enrollment t=0",
+  "subjects": 1600,
+  "true_generating_coefficients": {
+    "engagement_proxy": -0.35,
+    "health_proxy": 0.45,
+    "partner_proxy": 0.25
+  }
+}

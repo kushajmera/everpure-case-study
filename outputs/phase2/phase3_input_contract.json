@@ -1,0 +1,78 @@
+{
+  "account_identifier": "account_id",
+  "account_identifier_provenance": "OBSERVED_SOURCE",
+  "analysis_as_of_date": "2026-10-09",
+  "artifact": "outputs/phase2/reactivation_scenario_probabilities.csv",
+  "assumption_fingerprint_canonicalization": "SHA-256 of UTF-8 JSON with sorted keys, compact separators, ensure_ascii=False and no NaN",
+  "assumption_fingerprint_sha256": "6195ba2e90c95976ed91b7bdd42509341fd22e71e6b2bb5aed2e5d2a6d346ee7",
+  "assumption_register_artifact": "outputs/phase2/assumptions.json",
+  "causal_attribution": {
+    "gross_reactivation_is_incremental_uplift": false,
+    "incremental_cash_flow_requires_additional_assumptions": true,
+    "observed_treatment_status": false,
+    "untreated_counterfactual_available": false,
+    "without_counterfactual_valuation_label": "illustrative gross reactivation economics"
+  },
+  "cohort_policy": "reported_2y_scenario_cohort",
+  "cohort_status": "primary_reported_2y",
+  "event_semantics": {
+    "coherent_first_event_time": "May be sampled from the assumed constant account hazard; nested horizon indicators then follow from that time",
+    "events_per_account_per_path_max": 1,
+    "horizon_probabilities": "cumulative first-reactivation probabilities",
+    "independent_horizon_sampling": false,
+    "sum_across_horizons": false
+  },
+  "expected_accounts": 1144,
+  "expected_rows": 10296,
+  "fiscal_eligibility_confirmed": false,
+  "grain": [
+    "account_id",
+    "scenario_name",
+    "horizon_months"
+  ],
+  "hierarchy_semantics": {
+    "automatic_parent_child_spend_summation_allowed": false,
+    "phase3_dependence_assumption_required": true,
+    "within_root_outcomes_may_be_correlated": true
+  },
+  "horizons_months": [
+    3,
+    6,
+    12
+  ],
+  "observed_conversions": false,
+  "parameter_version": "phase2-assumptions-v1",
+  "probability_artifact_sha256": "6322a0adc58dbaa999e5523f3a17db5faaa61ca3f8a359011a6322e0466800c8",
+  "probability_column": "cumulative_reactivation_probability",
+  "probability_definition": "P(reactivation by horizon from assumed 2026-10-09 origin)",
+  "probability_provenance": "ASSUMPTION_BASED_NOT_CALIBRATED",
+  "probability_range_inclusive": [
+    0,
+    1
+  ],
+  "reconcile_to": "outputs/phase2/reactivation_scenario_summary.csv",
+  "root_identifier": "root_account_id",
+  "scenario_semantics": {
+    "confidence_intervals": false,
+    "empirical_probability_weights_available": false,
+    "kind": "fixed assumed cases",
+    "mutually_exclusive_outcomes": false,
+    "random_scenario_sampling_requires_new_explicit_weights": true
+  },
+  "scenarios": [
+    "conservative",
+    "base",
+    "optimistic"
+  ],
+  "source_sha256": "6863ea0014f050355bf9e0c5166e2284edfe8521ea3d87a2a2fa168177a229bc",
+  "summary_artifact_sha256": "c697718ceb024e6bf132a8581f2ca60552e1d794d776eb9b5c066818fa76fb7c",
+  "summary_rule": "expected_reactivations=sum(cumulative_reactivation_probability) by scenario_name,horizon_months",
+  "time_basis": {
+    "calendar_date_mapping_required": true,
+    "exact_calendar_deadline_claim_without_mapping_allowed": false,
+    "financial_discounting_convention_required": true,
+    "unit": "continuous_month"
+  },
+  "time_unit": "continuous_month",
+  "version": "phase2-to-phase3-v2"
+}

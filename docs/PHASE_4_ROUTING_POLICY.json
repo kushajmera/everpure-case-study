@@ -1,0 +1,47 @@
+{
+  "version": "phase4-routing-policy-v2",
+  "reference_scenario": "base",
+  "reference_discount_tier": "medium_15pct",
+  "enterprise_scale_proxy": {
+    "source_field": "monthly_usage_gb_num",
+    "minimum_gb": 37656,
+    "basis": "Observed 75th percentile of the 1144 provisional source cohort, rounded to an integer; usage is a scale heuristic, not verified enterprise status"
+  },
+  "service_backlog": {
+    "elevated_from_valid_tickets": 3,
+    "critical_from_valid_tickets": 5,
+    "sentinel": 999
+  },
+  "priority": {
+    "low_upper_npv_usd": 161.51698172008832,
+    "medium_upper_npv_usd": 200.26496145151106,
+    "basis": "Exact frozen base/medium_15pct NPV tie boundaries read with round-trip float precision; equality remains in the lower tier"
+  },
+  "rule_order": ["R0", "R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8"],
+  "financial_label": "ILLUSTRATIVE_NET_PROGRAM_NPV_NOT_CAUSALLY_ATTRIBUTED",
+  "probability_label": "ASSUMPTION_BASED_NOT_CALIBRATED",
+  "dormancy_proxy_label": "ASSUMED_DORMANCY_PERSISTENCE_PROXY",
+  "ticket_velocity_observed": false,
+  "revenue_decay_observed": false,
+  "execution_authorized": false,
+  "recommended_action_type": "PLANNING_ONLY",
+  "required_executive_disclosures": {
+    "fiscal_eligibility": "Source-reported two-year inactivity is provisional; fiscal eligibility is unconfirmed.",
+    "assumed_probabilities": "Reactivation probabilities are assumption-based and not calibrated to observed customer outcomes.",
+    "illustrative_npv": "NPV is illustrative net program value, not verified customer profitability.",
+    "no_causal_uplift": "Incremental campaign uplift is not causally identified without an untreated counterfactual.",
+    "historical_spend": "Historical recorded spend is not ARR or verified recoverable revenue.",
+    "root_financial_overlap": "Parent-child billable independence and consolidated root revenue are unverified.",
+    "ticket_velocity": "Open tickets are a snapshot backlog proxy; ticket velocity is unobserved.",
+    "revenue_decay": "Historical account revenue decay is unobserved.",
+    "missing_feature_bias": "Unknown health and sentinel tickets can bias assumed financial rankings.",
+    "hypothetical_offers": "The 5, 15, and 30 percent commercial discounts are hypothetical interventions without estimated response elasticity.",
+    "source_discounts": "Recorded source discounts differ from the hypothetical commercial offers.",
+    "root_dependence": "Within-root reactivation outcomes are modeled as conditionally independent.",
+    "discount_mechanics": "Lower discounts are mechanically favored when conversion assumptions do not change; fixed delivery costs may change that comparison.",
+    "scenario_priority_sensitivity": "Priority counts under alternative financial scenarios use the fixed base/15% dollar cutoffs. They measure movement across absolute financial thresholds, not changes in relative account rank.",
+    "committed_adverse_stress": "Committed Phase 3 combined adverse stress: base hazard multiplier 1.0, $750 monthly gross revenue, 45 percent margin, $150 outreach, $300 activation, 24 percent annual financial discount, at most 3 paid months, 15 percent commercial discount; analytical expected NPV -$124,647.432973.",
+    "alternative_compounded_stress": "Separate alternative compounded stress: base hazard multiplier 0.5, $750 monthly gross revenue, 60 percent margin, $150 outreach, $200 activation, 12 percent annual financial discount, at most 3 paid months, 15 percent commercial discount; analytical expected NPV -$124,704.050145.",
+    "no_contact_authorization": "No customer-contact action was authorized or executed; every recommendation is planning only."
+  }
+}

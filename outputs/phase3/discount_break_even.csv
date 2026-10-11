@@ -1,0 +1,7 @@
+metric,commercial_tier,threshold,status,search_interval,baseline_or_target_npv,provenance
+minimum_monthly_gross_revenue,low_5pct,364.88906484381022,feasible,closed form,0,ASSUMPTION_BASED_NOT_CALIBRATED
+minimum_contribution_margin,low_5pct,0.21893343890628611,feasible,closed form,0,ASSUMPTION_BASED_NOT_CALIBRATED
+maximum_outreach_cost_per_target,low_5pct,311.13054781047964,feasible,closed form,0,ASSUMPTION_BASED_NOT_CALIBRATED
+maximum_activation_cost,low_5pct,2182.4066403647425,feasible,closed form,0,ASSUMPTION_BASED_NOT_CALIBRATED
+discount_response_hazard_multiplier,medium_15pct,1.1321445378760644,hypothetical_hazard_multiplier,"[1,100]",241533.34669518872,ASSUMPTION_BASED_NOT_CALIBRATED
+discount_response_hazard_multiplier,high_30pct,1.4118569293850696,hypothetical_hazard_multiplier,"[1,100]",241533.34669518872,ASSUMPTION_BASED_NOT_CALIBRATED
